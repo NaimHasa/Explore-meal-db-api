@@ -1,3 +1,4 @@
+//data load from mealDB
 const mealsDataLoad = (search) => {
     const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`
     fetch(url)
@@ -5,6 +6,7 @@ const mealsDataLoad = (search) => {
         .then(data => displayMealsData(data.meals));
 }
 
+//dynamic to display meals
 const displayMealsData = meals => {
     const mealsContainer = document.getElementById('meals-container');
 
@@ -22,6 +24,7 @@ const displayMealsData = meals => {
                         <h5 class="card-title">${meal.strMeal}</h5>
                         <p class="card-text">${meal.strInstructions.slice(0, 200)}...</p>
                     </div>
+                    
                 </div>
         
         `;
@@ -32,6 +35,8 @@ const displayMealsData = meals => {
 
 }
 
+//search AND button filed 
+
 const searchFood = () => {
     const searchingFiled = document.getElementById('input-filed');
     const searchText = searchingFiled.value;
@@ -41,6 +46,8 @@ const searchFood = () => {
 
 
 }
+
+//mealBD from meal info detelis
 const displayMealDeteli = (idMeal) => {
 
     // console.log('get detelis', idMeal)
