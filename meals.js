@@ -44,4 +44,4 @@ const searchFood = () => {
 
 
 
-// mealsDataLoad('');
+mealsDataLoad('');
