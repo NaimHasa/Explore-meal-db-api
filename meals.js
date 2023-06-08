@@ -60,7 +60,8 @@ const detelisDisplay = (detelisInfo) => {
     const mealDetelis = document.createElement('div');
     mealDetelis.classList.add('card');
     mealDetelis.innerHTML = `
-    
+    <div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
     <div class="col-md-4">
       <img src="${detelisInfo.strMealThumb
         }" class="img-fluid rounded-start" alt="...">
@@ -69,7 +70,8 @@ const detelisDisplay = (detelisInfo) => {
       <div class="card-body">
         <h5 class="card-title">${detelisInfo.strMeal}</h5>
         <p class="card-text">${detelisInfo.strInstructions.slice(0, 200)}</p>
-       
+        </div>
+        </div>
       </div>
     
     `;
